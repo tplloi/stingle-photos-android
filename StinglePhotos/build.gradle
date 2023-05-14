@@ -12,14 +12,14 @@ keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
 
 
 android {
-    signingConfigs {
-        release {
-            storeFile file(keystoreProperties['storeFile'])
-            keyAlias keystoreProperties['keyAlias']
-            storePassword keystoreProperties['storePassword']
-            keyPassword keystoreProperties['keyPassword']
-        }
-    }
+//    signingConfigs {
+//        release {
+//            storeFile file(keystoreProperties['storeFile'])
+//            keyAlias keystoreProperties['keyAlias']
+//            storePassword keystoreProperties['storePassword']
+//            keyPassword keystoreProperties['keyPassword']
+//        }
+//    }
     compileSdkVersion 33
     defaultConfig {
         applicationId "org.stingle.photos"
@@ -30,7 +30,7 @@ android {
     }
     buildTypes {
         release {
-            signingConfig signingConfigs.release
+//            signingConfig signingConfigs.release
             resValue "string", "app_name", "Stingle Photos"
             resValue "string", "camera", "Camera"
             resValue "string", "content_provider", "org.stingle.photos.share"
